@@ -1,0 +1,632 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+.home {
+  background-image: url("Ecotrade\ image/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  z-index: -1;
+}
+
+header {
+  margin-top: 2%;
+  position: absolute;
+  width: 95%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dc1f02;
+  padding: 10px 50px;
+  color: #fff;
+  margin-left: 5%;
+  border-radius: 15px;
+}
+.menu{
+  display: none;
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  cursor: pointer;
+  margin-left: -70%;
+  margin-top: 3%;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+.navbar nav ul li a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.auth-buttons .active {
+  background-color: #232230;
+}
+.auth-buttons {
+  display: flex;
+  cursor: pointer;
+}
+
+.auth-buttons button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contactus {
+  background-color: #ffffff;
+  color: #dc1f02;
+}
+
+/* Hero Section */
+.hero {
+  padding: 100px;
+  text-align: left;
+}
+
+.hero-content {
+  padding-top: 5%;
+  padding-left: 10%;
+  color: #ffffff;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: -10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  width: 45%;
+}
+
+.contact-button {
+  background-color: #dc1f02;
+  color: #fff;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Services Section */
+.services {
+  position: absolute;
+  margin-top: -5%;
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 20px 50px;
+  margin-left: 35%;
+  border-radius: 27px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.services .up {
+  width: 90%;
+  display: flex;
+  gap: 20px;
+}
+
+.services .down {
+  width: 90%;
+  display: flex;
+  gap: 20px;
+}
+
+.service-card {
+  text-align: left;
+  width: 100%;
+}
+
+.service-card img {
+  width: 35%;
+}
+
+.service-card h3 {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #363636;
+}
+
+/*second screen*/
+
+.transport {
+  text-align: center;
+  padding: 5%;
+}
+.headings h2 {
+  color: #dc1f02;
+  padding-top: 15%;
+}
+.headings h1 {
+  padding-top: 20px;
+  font-size: 40px;
+}
+.headings p {
+  padding-top: 1%;
+  padding-left: 35%;
+  font-size: 12px;
+  width: 65%;
+  color: #363636;
+}
+.images {
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  gap: 30px;
+  padding-top: 5%;
+  position: relative;
+}
+.images img {
+  height: 100%;
+  width: 100%;
+}
+.info {
+  color: #ffffff;
+  margin-top: -15%;
+  padding: 10px 30px;
+  font-weight: bold;
+  text-align: left;
+}
+.info p {
+  font-size: 20px;
+  position: absolute;
+  margin-top: -5%;
+  color: #ffffff;
+}
+.info img {
+  width: 13%;
+  margin-top: -7%;
+  margin-left: 88%;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+/*third screen*/
+.aboutus {
+  position: relative;
+  display: flex;
+  padding-left: 12%;
+  padding-right: 15%;
+}
+.arrow {
+  position: absolute;
+}
+.arrow img {
+  rotate: 210deg;
+  margin-top: 30%;
+  margin-left: 20%;
+}
+.left {
+  width: 50%;
+  position: relative;
+}
+.right {
+  width: 50%;
+}
+.left .img1 img {
+  width: 40%;
+  height: 20%;
+}
+.img2 img {
+  width: 40%;
+  height: 40%;
+}
+.img3 img {
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  padding-left: 38%;
+  margin-top: -89%;
+}
+.exp {
+  position: absolute;
+  margin-top: -60%;
+  margin-left: 28%;
+  width: 17%;
+  text-align: center;
+  background: #232230;
+  color: #ffffff;
+  padding: 15px 5px;
+  font-size: 12px;
+  border-radius: 15px;
+}
+
+.right h2 {
+  color: #dc1f02;
+  padding-top: 30%;
+}
+.right h1 {
+  font-size: 40px;
+  padding-top: 2%;
+}
+.right p {
+  padding: 5% 0;
+  color: #363636;
+}
+.read-button {
+  background-color: #dc1f02;
+  color: #fff;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/*forth screen*/
+.specialist {
+  padding-top: 10%;
+  position: relative;
+}
+.top {
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: center;
+  position: relative;
+}
+.head h2 {
+  color: #dc1f02;
+}
+.head h1 {
+  padding-top: 30px;
+  font-size: 40px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  padding-top: 5%;
+}
+.cards-up {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.cards-down {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.card {
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  position: relative;
+}
+.card img {
+  width: 30%;
+}
+.card h3,
+p {
+  padding-top: 10px;
+}
+.card p {
+  font-size: 15px;
+  color: #363636;
+}
+.card h4 {
+  padding-top: 30px;
+}
+
+.specialist .bottom {
+  background: url("Ecotrade\ image/bg-what.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  margin-top: -5%;
+}
+.provide {
+  padding-top: 10%;
+  padding-bottom: 5%;
+  padding-right: 15%;
+  padding-left: 58%;
+}
+.provide h2 {
+  color: #dc1f02;
+}
+.provide h1,
+p {
+  padding-top: 4%;
+}
+.provide p {
+  color: #ffffff;
+}
+.provide .contact-button {
+  margin-top: 10%;
+}
+
+/*fifth screen*/
+.process {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 10%;
+  text-align: center;
+}
+.operate h2 {
+  color: #dc1f02;
+}
+.operate h1 {
+  padding-top: 3%;
+  font-size: 40px;
+  font-weight: bolder;
+}
+.operate p {
+  margin-top: -2%;
+  font-size: 12px;
+  width: 38%;
+  margin-left: 33%;
+  color: #363636;
+}
+.vector img {
+  width: 90%;
+  margin-top: 5%;
+  margin-left: -50%;
+  position: absolute;
+}
+.process .arrow img {
+  rotate: 150deg;
+  margin-top: 18%;
+  margin-left: 100%;
+}
+.box {
+  display: flex;
+  padding-left: 3%;
+}
+.cycle .arrow img {
+  width: 125%;
+  rotate: 10deg;
+  padding-left: 105%;
+  margin-top: -3%;
+}
+.work img {
+  width: 60%;
+  position: relative;
+}
+.work p {
+  margin-top: -2%;
+  font-size: 15px;
+  color: #363636;
+}
+.select {
+  margin-top: 40%;
+}
+.Create {
+  margin-top: 80%;
+}
+.payment {
+  margin-top: 20%;
+}
+.delivery {
+  margin-top: 70%;
+}
+
+/*6th screen*/
+.us {
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-top: 10%;
+  padding: 5%;
+  background: url("Ecotrade\ image/counter-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.who {
+  text-align: center;
+}
+.who h2 {
+  color: #dc1f02;
+}
+.who h1 {
+  font-size: 50px;
+  padding-top: 2%;
+  color: #ffffff;
+}
+.ratio {
+  display: flex;
+  gap: 30px;
+  padding-left: 25%;
+  padding-top: 5%;
+}
+.ratio img {
+  width: 30%;
+  padding-bottom: 10px;
+}
+.ratio p {
+  font-size: 10px;
+  padding-top: 10px;
+  color: #232230;
+}
+.pack {
+  background: #ffffff;
+  border-radius: 15px;
+  width: 15%;
+  padding: 20px 0px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/*7th screen*/
+.why {
+  display: flex;
+  gap: 20px;
+  padding-left: 15%;
+  padding-right: 5%;
+  padding-top: 10%;
+}
+.left {
+  margin-top: 7%;
+  padding: 20px 30px;
+}
+.why .arrow img {
+  rotate: 0deg;
+  margin-left: 0%;
+  margin-top: -13%;
+  width: 150%;
+}
+.trust h2 {
+  color: #dc1f02;
+}
+.trust h1 {
+  padding-top: 5%;
+  font-size: 40px;
+}
+.trust span {
+  font-size: 30px;
+  font-weight: lighter;
+}
+.trust p {
+  font-size: 15px;
+}
+.trust button {
+  margin-top: 5%;
+}
+.right img {
+  position: absolute;
+}
+
+/*8th page*/
+.footer {
+  position: relative;
+  padding: 80px;
+  padding-bottom: 13.5%;
+  margin-top: 15%;
+  background: #232230;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+}
+.all {
+  display: flex;
+  flex-direction: column;
+  gap: 20%;
+}
+.name p {
+  color: #ece6de;
+  width: 50%;
+}
+.social svg {
+  padding-top: 15px;
+  height: 40px;
+  width: 40px;
+}
+.links {
+  width: 30%;
+  margin-left: -30%;
+}
+.links h3 {
+  padding-bottom: 20px;
+}
+.links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+}
+.links ul li a {
+  text-decoration: none;
+  color: #ece6de;
+  font-size: 15px;
+}
+.office {
+  width: 15%;
+  margin-left: -8%;
+}
+.office h3 {
+  padding-bottom: 20px;
+}
+.office svg {
+  position: absolute;
+  margin-left: -2%;
+}
+.office p {
+  color: #ece6de;
+  padding-left: 12%;
+}
+.office .address {
+  width: 150%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 7px;
+}
+.foot-img img {
+  width: 100%;
+  margin-top: -16%;
+  margin-left: 10%;
+  margin-bottom: -18%;
+}
+.type{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  position: absolute;
+  margin-top: 24.8%;
+  margin-left: 25%;
+}
+hr {
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  margin-top: 28%;
+}
+.copyrights{
+  position: absolute;
+  margin-top: 26.5%;
+  margin-left: 20%;
+}
