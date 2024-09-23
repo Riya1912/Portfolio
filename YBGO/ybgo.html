@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YBGO</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="loginSignupPopup" class="popup">
+            <div class="popup-content">
+                <!-- Close button -->
+                <span class="close-btn" id="closePopup">&times;</span>
+                <!-- First screen: Login options -->
+                <div id="loginOptions">
+                    <h2>Login</h2>
+                    <button class="google-btn">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google logo">
+                        Continue with Google
+                    </button>
+                    <div class="divider"><span>or</span></div>
+                    <input type="text" id="phoneNumber" placeholder="Mobile Number" required>
+                    <button id="continueWithPhone" class="continue-btn">Continue</button>
+                    <p class="terms">By proceeding, I agree to <a href="#">T&C Privacy & Policy & Tariff Notes</a></p>
+                </div>
+
+                <!-- Second screen: Mobile number entry with flag -->
+                <div id="phoneVerification" style="display:none;">
+                    <h2>Login / Signup</h2>
+                    <fieldset>
+                        <legend><label for="enteredPhoneNumber">Enter your mobile Number</label></legend>
+                        <div class="phone-input">
+                            <span class="flag"><img src="india-waving-flag-icon-vector-28508936-removebg-preview 1.png"
+                                    height="20" width="30"></span>
+                            <span class="country-code">+91</span>
+                            <input type="text" id="enteredPhoneNumber" placeholder="9876543210" required>
+                        </div>
+                    </fieldset>
+                    <button class="continue-btn" id="forotp">Continue</button>
+                    <p class="terms">By proceeding, I agree to <a href="#">T&C Privacy & Policy & Tariff Notes</a></p>
+                </div>
+
+                <!-- OTP Verification Popup -->
+                <div id="otpVerification" class="popup" style="display:none;">
+                    <div class="popup-content">
+                        <span class="close-btn" id="closeOtpPopup">&times;</span>
+                        <h2>Verify OTP</h2>
+                        <p>Enter 6 digit OTP send to <span>9876543210</span><strong id="otpPhoneNumber"></strong>.</p>
+                        <input type="text" id="otpInput" required>
+                        <input type="text" id="otpInput" required>
+                        <input type="text" id="otpInput" required>
+                        <input type="text" id="otpInput" required>
+                        <input type="text" id="otpInput" required>
+                        <input type="text" id="otpInput" required>
+                        <button id="verifyOtp" class="continue-btn">Verify</button>
+                        <p id="otpTimer">Didn’t get the OTP? Resend OTP in <span id="timer">00:25</span></p>
+                        <p class="terms" style="color: #000000;">I agree to receive critical messages such as OTP,
+                            booking details on WhatsApp.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" bEjmph">
+            <div class="navbar">
+                <header class="header-sticky">
+                    <h1 href="/" class="logo">YB<span>GO</span></h1>
+                    <ul class="list">
+                        <li class="flight"><a href="/flights/" target="_self" class="icons"><span
+                                    class="kxwWAw header-sprite nav-icon-flights"></span><span
+                                    class="name">Flights</span></a></li>
+                        <li class="other"><a href="/hotels/" target="_self" class="icons"><span
+                                    class="kxwWAw header-sprite nav-icon-hotels"></span><span
+                                    class="name">Hotels</span></a></li>
+                        <li class="other"><a href="/trains/" target="_self" class="icons"><span
+                                    class="kxwWAw header-sprite nav-icon-trains"></span><span
+                                    class="name">Trains</span></a></li>
+                        <li class="other"><a href="/cars/" target="_self" class="icons"><span
+                                    class="kxwWAw header-sprite nav-icon-cabs"></span><span class="name">Cabs</span></a>
+                        </li>
+                        <li class="other"><a href="/bus/" target="_self" class="icons"><span
+                                    class="kxwWAw header-sprite nav-icon-bus"></span><span class="name">Bus</span></a>
+                        </li>
+                        <li class="other"><a href="/giholidays/" target="_blank" class="icons"><span
+                                    class="kxwWAw header-sprite nav-icon-holiday"></span><span
+                                    class="name">Holidays</span></a></li>
+                        <li class="other"><a
+                                href="https://tripmoney.goibibo.com/partners/gi/forex/listing?utm_source=header_goibibo&amp;utm_medium=desktop"
+                                target="_blank" class="icons"><span
+                                    class="kxwWAw header-sprite nav-icon-forex"></span><span
+                                    class="name">Forex</span></a></li>
+                        <li class="other"><a href="/insurance?cmp=desktop_header" target="_self" class="icons"><span
+                                    class="kxwWAw header-sprite nav-icon-insurance"></span><span
+                                    class="name">Insurance</span></a></li>
+                    </ul>
+                    <div class="trip">
+                        <div class="sign">
+                            <div class="login"><span class="header-sprite user-icon" style="margin-right: 5px;"></span>
+                                <div class="btn" style="height: 16px;">
+                                    <a class="button" style="height: 16px; color: black;">LOGIN / SIGNUP</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+
+        <div class="head">
+            <div class="box">
+                <div class="vh">
+                    <div class="airport">
+                        <img src="image 21.png">
+                        <hr>
+                        <p>Airport/Local</p>
+                    </div>
+                    <div class="station">
+                        <img src="image 22.png">
+                        <hr>
+                        <p>Out Station</p>
+                    </div>
+                    <div class="hour">
+                        <img src="image 20.png" alt="">
+                        <hr>
+                        <p>Hourly Rental</p>
+                    </div>
+                </div>
+                <div class="radio">
+                    <div class="one-way">
+                        <input type="radio" name="radio" style="height:20px; width:20px;">
+                        <p class="type">One-way</p>
+                        </input>
+                    </div>
+                    <input type="radio" name="radio" style="height:20px; width:20px;">
+                    <p class="type">Round-trip</p>
+                    <input type="radio" name="radio" style="height:20px; width:20px;">
+                    <p class="type">Multi-city</p>
+                </div>
+
+                <div class="text">
+                    <div class="enter">
+                        <div class="data " style="width: 300px;"><span class="label">From</span>
+                            <input type="text" style="margin-left: 0px;" placeholder="Enter city or airport">
+                        </div>
+                        <span class="dd"><svg width="20" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.11 6.739a.842.842 0 0 1-.842-.842V4.844a.21.21 0 0 0-.21-.211H4.543a1.264 1.264 0 1 1 0-2.527h8.515a.21.21 0 0 0 .21-.21V.841A.843.843 0 0 1 14.544.12l4.212 2.528a.842.842 0 0 1 0 1.444L14.544 6.62a.843.843 0 0 1-.433.12ZM.409 10.26l4.212-2.527a.842.842 0 0 1 1.276.723v1.053c0 .116.095.21.21.21h8.516a1.264 1.264 0 1 1 0 2.528H6.108a.21.21 0 0 0-.21.21v1.053a.842.842 0 0 1-1.277.722L.409 11.705a.842.842 0 0 1 0-1.445Z"
+                                    fill="#2276E3"></path>
+                            </svg></span>
+                    </div>
+
+                    <div class="enter">
+                        <div class="data " style="width: 300px; padding-left: 27px;"><span class="label">To</span>
+                            <input type="text" style="margin-left: -5px;" placeholder="Enter city or airport">
+                        </div>
+                    </div>
+
+                    <div class="date-section">
+                        <div class="enter">
+                            <div class="data" style="width: 200px;"><span class="label">Date</span>
+                                <p class="date"><input type="date"></p>
+                            </div>
+                        </div>
+
+                        <div class="enter">
+                            <div class="data " style="width: 200px;"><span class="label">Time</span>
+                                <p class="return"><input type="time"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="Checkbox">
+                    <div class="More">
+                        <div class="benefits">
+                            <img
+                                src="pngtree-special-offer-red-and-yellow-background-vector-icon-png-image_9231141_1-removebg-preview.png">
+                        </div>
+                    </div>
+                    <div class="check1">
+                        <div class="s">
+                            <div class="check"><input type="radio" name="speacialFare" id="ST"
+                                    class="sc-12foipm-92 cJqbIQ"><label for="ST" class="tooltip kSreEi">
+                                    <input type="radio" name="fare" id=""
+                                        style="height: 20px; width: 20px; margin-top: 0px;">
+                                    <div class="img"><img src="https://gos3.ibcdn.com/student-1687501001.png" width="32"
+                                            height="32" alt="ST">
+                                        <div class="name">
+                                            <div class="person">Student</div>
+                                            <div style="color: rgb(113, 113, 113); font-size: 12px;">
+                                                Extra Baggage
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="check"><input type="radio" name="speacialFare" class="sc-12foipm-92 cJqbIQ"><label
+                                for="SC" class="tooltip kSreEi">
+                                <input type="radio" name="fare" id=""
+                                    style="height: 20px; width: 20px; margin-top: 0px;">
+                                <div class="img"><img src="https://gos3.ibcdn.com/seniorCitizen-1687500989.png"
+                                        width="32" height="32" alt="SC">
+                                    <div class="name">
+                                        <div class="person">Senior Citizen</div>
+                                        <div style="color: rgb(113, 113, 113); font-size: 12px;">
+                                            Exclusive Discounts
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="check2">
+                        <div class="check"><input type="radio" name="speacialFare" class="sc-12foipm-92 cJqbIQ"><label
+                                for="AF" class="tooltip kSreEi">
+                                <input type="radio" name="fare" id=""
+                                    style="height: 20px; width: 20px; margin-top: 0px;">
+                                <div class="img"><img src="https://gos3.ibcdn.com/defence-1687500960.png" width="32"
+                                        height="32" alt="AF">
+                                    <div class="name">
+                                        <div class="person">Armed Forces</div>
+                                        <div style="color: rgb(113, 113, 113); font-size: 12px;">
+                                            Exclusive Discounts
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="check"><input type="radio" name="speacialFare" class="sc-12foipm-92 cJqbIQ"><label
+                                for="D" class="tooltip kSreEi">
+                                <input type="radio" name="fare" id=""
+                                    style="height: 20px; width: 20px; margin-top: 0px; color: blue;">
+                                <div class="img"><img src="https://gos3.ibcdn.com/doctorNurses-1687500975.png"
+                                        width="32" height="32" alt="D">
+                                    <div class="name">
+                                        <div class="person">Doctors & Nurses</div>
+                                        <div style="color: rgb(113, 113, 113); font-size: 12px;">
+                                            Exclusive Discounts
+                                        </div>
+                                      
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search">
+            <button id="ybgoButton">Search Cab</button>
+        </div>
+
+
+        <div class="box2">
+            <div class="head">
+                <h1>Trips For You</h1>
+            </div>
+
+            <div class="places">
+                <div class="place">
+                    <div class="type" id="placecontainer">
+                        <div class="part">
+                            <div class="details">
+                                <div class="img">
+                                    <img src="Delhi.jpg" class="package" alt="" srcset="">
+                                </div>
+                                <div class="dom">
+                                    <div>
+                                        <div class="off">
+                                            <p class="book">Delhi
+                                            <div class="package-price">₹2999/-</div>
+                                            </p>
+                                        </div>
+                                        <div class="form">
+                                            <label>Adults: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                            <label>Children: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                        </div>
+                                        <div class="cab">
+                                            <label for="cab-select">Cab Type:</label>
+                                            <select id="cab-select" class="cab-select">
+                                                <option value="standard">Standard</option>
+                                                <option value="luxury">Luxury</option>
+                                                <option value="suv">SUV</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button>Book Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        style=" position:absolute; margin-top:3px; margin-left: 3px; rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="type" id="placecontainer">
+                        <div class="part">
+                            <div class="details">
+                                <div class="img">
+                                    <img src="suntemple.jpg" class="package" alt="" srcset="">
+                                </div>
+                                <div class="dom">
+                                    <div>
+                                        <div class="off">
+                                            <p class="book">Punjab
+                                            <div class="package-price">₹3999/-</div>
+                                            </p>
+                                        </div>
+                                        <div class="form">
+                                            <label>Adults: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                            <label>Children: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                        </div>
+                                        <div class="cab">
+                                            <label for="cab-select">Cab Type:</label>
+                                            <select id="cab-select" class="cab-select">
+                                                <option value="standard">Standard</option>
+                                                <option value="luxury">Luxury</option>
+                                                <option value="suv">SUV</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button>Book Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        style=" position:absolute; margin-top:3px; margin-left: 3px; rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="type" id="placecontainer">
+                        <div class="part">
+                            <div class="details">
+                                <div class="img">
+                                    <img src="mumbai.jpg" class="package" alt="" srcset="">
+                                </div>
+                                <div class="dom">
+                                    <div>
+                                        <div class="off">
+                                            <p class="book">Mumbai
+                                            <div class="package-price">₹3999/-</div>
+                                            </p>
+                                        </div>
+                                        <div class="form">
+                                            <label>Adults: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                            <label>Children: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                        </div>
+                                        <div class="cab">
+                                            <label for="cab-select">Cab Type:</label>
+                                            <select id="cab-select" class="cab-select">
+                                                <option value="standard">Standard</option>
+                                                <option value="luxury">Luxury</option>
+                                                <option value="suv">SUV</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button>Book Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        style=" position:absolute; margin-top:3px; margin-left: 3px; rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="type" id="placecontainer">
+                        <div class="part">
+                            <div class="details">
+                                <div class="img">
+                                    <img src="jaipur.jpg" class="package" alt="" srcset="">
+                                </div>
+                                <div class="dom">
+                                    <div>
+                                        <div class="off">
+                                            <p class="book">jaipur
+                                            <div class="package-price">₹3999/-</div>
+                                            </p>
+                                        </div>
+                                        <div class="form">
+                                            <label>Adults: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                            <label>Children: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                        </div>
+                                        <div class="cab">
+                                            <label for="cab-select">Cab Type:</label>
+                                            <select id="cab-select" class="cab-select">
+                                                <option value="standard">Standard</option>
+                                                <option value="luxury">Luxury</option>
+                                                <option value="suv">SUV</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button>Book Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        style=" position:absolute; margin-top:3px; margin-left: 3px; rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="type" id="placecontainer">
+                        <div class="part">
+                            <div class="details">
+                                <div class="img">
+                                    <img src="Ooty.jpg" class="package" alt="" srcset="">
+                                </div>
+                                <div class="dom">
+                                    <div>
+                                        <div class="off">
+                                            <p class="book">Ooty
+                                            <div class="package-price">₹4999/-</div>
+                                            </p>
+                                        </div>
+                                        <div class="form">
+                                            <label>Adults: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                            <label>Children: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                        </div>
+                                        <div class="cab">
+                                            <label for="cab-select">Cab Type:</label>
+                                            <select id="cab-select" class="cab-select">
+                                                <option value="standard">Standard</option>
+                                                <option value="luxury">Luxury</option>
+                                                <option value="suv">SUV</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button>Book Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        style=" position:absolute; margin-top:3px; margin-left: 3px; rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="type" id="placecontainer">
+                        <div class="part">
+                            <div class="details">
+                                <div class="img">
+                                    <img src="nainital.jpg" class="package" alt="" srcset="">
+                                </div>
+                                <div class="dom">
+                                    <div>
+                                        <div class="off">
+                                            <p class="book">Nainital
+                                            <div class="package-price">₹9999/-</div>
+                                            </p>
+                                        </div>
+                                        <div class="form">
+                                            <label>Adults: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                            <label>Children: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                        </div>
+                                        <div class="cab">
+                                            <label for="cab-select">Cab Type:</label>
+                                            <select id="cab-select" class="cab-select">
+                                                <option value="standard">Standard</option>
+                                                <option value="luxury">Luxury</option>
+                                                <option value="suv">SUV</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button>Book Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        style=" position:absolute; margin-top:3px; margin-left: 3px; rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="type" id="placecontainer">
+                        <div class="part">
+                            <div class="details">
+                                <div class="img">
+                                    <img src="jk.jpg" class="package" alt="" srcset="">
+                                </div>
+                                <div class="dom">
+                                    <div>
+                                        <div class="off">
+                                            <p class="book">Jammu and Kashmir
+                                            <div class="package-price">₹9999/-</div>
+                                            </p>
+                                        </div>
+                                        <div class="form">
+                                            <label>Adults: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                            <label>Children: <button class="btn-minus">-</button><span
+                                                    class="number">0</span><button class="btn-plus">+</button></label>
+                                        </div>
+                                        <div class="cab">
+                                            <label for="cab-select">Cab Type:</label>
+                                            <select id="cab-select" class="cab-select">
+                                                <option value="standard">Standard</option>
+                                                <option value="luxury">Luxury</option>
+                                                <option value="suv">SUV</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button>Book Now<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        style=" position:absolute; margin-top:3px; margin-left: 3px; rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="explore">
+                        <div class="pr">
+                            <div class="bg">
+                            </div>
+                        </div>
+                        <P class="now">Explore Now</P>
+                        <a class="view">View More</a>
+                    </div>
+                </div>
+                <button id="c-l01" aria-label="prev scroll" class="left">
+                    <div class="left-arrow"></div>
+                </button>
+
+                <button id="c-l01" aria-label="prev scroll" class="right">
+                    <div class="right-arrow"></div>
+                </button>
+            </div>
+        </div>
+
+        <div id="booking-popup" class="popup">
+            <div class="popup-content">
+                <span class="out">&times;</span>
+                <h2>Booking Details</h2>
+                <form>
+                    <label for="popup-place">Place:</label>
+                    <input type="text" id="popup-place" name="place" readonly>
+
+                    <label for="popup-price">Price:</label>
+                    <input type="text" id="popup-price" name="price" readonly>
+
+                    <label for="popup-adults">Adults:</label>
+                    <input type="number" id="popup-adults" name="adults" readonly>
+
+                    <label for="popup-children">Children:</label>
+                    <input type="number" id="popup-children" name="children" readonly>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="date">Travel Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="box3">
+            <div class="ybgo">
+                <div class="why">
+                    <img src="why ybgo.jpg">
+                </div>
+                <div class="info">
+                    <h1>Why YBGO ?</h1>
+                    <p>The YBGO traveling app revolutionizes the way you travel by providing a seamless and
+                        user-friendly experience from booking to arrival. With just a few taps, you can book your ride
+                        instantly and enjoy real-time tracking of your driver, ensuring timely arrivals and peace of
+                        mind. The app offers multiple secure payment options, making transactions convenient and
+                        hassle-free. Plus, with 24/7 customer support at your fingertips, any questions or concerns are
+                        quickly addressed. Take advantage of exclusive promotions and discounts available only through
+                        YBGO, and choose from a variety of flexible ride options to suit your needs, whether its a quick
+                        taxi ride or a spacious vehicle for a group. Experience stress-free travel with YBGO!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box4">
+            <h1>Popular Destination</h1>
+            <div class="popular">
+                <div class="nav">
+                    <a class="active" data-target="delhi">Delhi</a>
+                    <a data-target="kutch">Kutch</a>
+                    <a data-target="Saputara">Saputara</a>
+                    <a data-target="Goa">Goa</a>
+                    <a data-target="Manali">Manali</a>
+                    <a data-target="Shimla">Shimla</a>
+                    <a data-target="Varansi">Varansi</a>
+                    <a data-target="Ladakh">Ladakh</a>
+                    <a data-target="Udaipur">Udaipur</a>
+                </div>
+            </div>
+
+
+            <div class="destinations">
+                <div class=" destination-item delhi">
+                    <div class="img">
+                        <img src="Delhi.jpg" width="265px">
+                    </div>
+                    <div class="about">
+                        <h1>Delhi</h1>
+                        <p>Red Fort | India Gate | Qutub Minar | Akshardham Temple | Humayun's Tomb | Sunder Nursery |
+                            Garden of Five Senses | Lotus Temple | Museum of Illusions</p>
+                        <div class="buttons">
+                            <div class="read">
+                                <button>Read More <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                            <div class="book">
+                                <button>Book Now <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-item kutch">
+                    <div class="img">
+                        <img src="Kutch.jpg" width="265px">
+                    </div>
+                    <div class="about">
+                        <h1>Kutch</h1>
+                        <p>Great Rann of Kutch | Kutch Desert Wildlife Sanctuary | Bhuj | Kalo Dungar | Mandvi Beach |
+                            Aina Mahal | Kutch Museum</p>
+                        <div class="buttons">
+                            <div class="read">
+                                <button>Read More <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                            <div class="book">
+                                <button>Book Now <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-item Saputara">
+                    <div class="img">
+                        <img src="Saputara.jpg" width="265px">
+                    </div>
+                    <div class="about">
+                        <h1>Saputara</h1>
+                        <p>Saputara Lake | Sunset Point | Saputara Tribal Museum | Gira Waterfall | Narmada River |
+                            Dangs Forest</p>
+                        <div class="buttons">
+                            <div class="read">
+                                <button>Read More <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                            <div class="book">
+                                <button>Book Now <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-item Goa">
+                    <div class="img">
+                        <img src="goa.png" width="265px">
+                    </div>
+                    <div class="about">
+                        <h1>Goa</h1>
+                        <p>Baga Beach | Anjuna Beach | Fort Aguada | Basilica of Bom Jesus | Dudhsagar Waterfalls |
+                            Scuba Diving and Snorkeling</p>
+                        <div class="buttons">
+                            <div class="read">
+                                <button>Read More <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                            <div class="book">
+                                <button>Book Now <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-item Manali">
+                    <div class="img">
+                        <img src="Manali.jpg">
+                    </div>
+                    <div class="about">
+                        <h1>Manali</h1>
+                        <p>Solang Valley | Rohtang Pass | Hadimba Temple | Manu Temple | Old Manali Village | Beas River
+                        </p>
+                        <div class="buttons">
+                            <div class="read">
+                                <button>Read More <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                            <div class="book">
+                                <button>Book Now <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-item Shimla">
+                    <div class="img">
+                        <img src="Shimla.jpg">
+                    </div>
+                    <div class="about">
+                        <h1>Shimla</h1>
+                        <p>The Ridge | Mall Road | Jakhoo Temple | Christ Church | Summer Hill | Viceregal Lodge</p>
+                        <div class="buttons">
+                            <div class="read">
+                                <button>Read More <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                            <div class="book">
+                                <button>Book Now <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-item Varansi">
+                    <div class="img">
+                        <img src="Varansi.jpg" width="265px">
+                    </div>
+                    <div class="about">
+                        <h1>Varansi</h1>
+                        <p>Dashashwamedh Ghat | Assi Ghat | Kashi Vishwanath Temple | Sarnath | Banaras Hindu University
+                            | Manikarnika Ghat</p>
+                        <div class="buttons">
+                            <div class="read">
+                                <button>Read More <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                            <div class="book">
+                                <button>Book Now <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-item Ladakh">
+                    <div class="img">
+                        <img src="ladakh.jpg">
+                    </div>
+                    <div class="about">
+                        <h1>Ladakh</h1>
+                        <p>Pangong Lake | Nubra Valley | Leh Palace | Magnetic Hill | Tso Moriri Lake | Hemis Monastery
+                        </p>
+                        <div class="buttons">
+                            <div class="read">
+                                <button>Read More <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                            <div class="book">
+                                <button>Book Now <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-item Udaipur">
+                    <div class="img">
+                        <img src="udaipur.jpg">
+                    </div>
+                    <div class="about">
+                        <h1>Udaipur</h1>
+                        <p>City Palace | Lake Pichola | Jag Mandir | Saheliyon-ki-Bari | Fateh Sagar Lake | Jaisamand
+                            Lake</p>
+                        <div class="buttons">
+                            <div class="read">
+                                <button>Read More <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                            <div class="book">
+                                <button>Book Now <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                                        style="  margin-top:1.5px; position: absolute;  rotate: -90deg;"
+                                        fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1 id="modal-title"></h1>
+                <img id="modal-image" src="" alt="Destination" width="50%">
+                <p id="modal-description"></p>
+                <p id="modal-price"></p>
+                <button id="book-now-btn">Book Now</button>
+            </div>
+        </div>
+
+        <div class="box5" id="downloadSection">
+            <h1>Download The App</h1>
+            <div class="download">
+                <div class="left-side">
+                    <p>Book an outstation cab from the application</p>
+                    <button id="downloadButton">Download App</button>
+                </div>
+                <div class="right-side">
+                    <img id="qrCode" src="QR_Code_example.png" style="display: none;">
+                </div>
+            </div>
+        </div>
+
+        <div class="box6">
+            <div class="feedback">
+                <h1>Testimonials</h1>
+                <div class="feedback1">
+                    <div class="ankita1">
+                        <div class="detail1">
+                            <img src="ankita 1.png" alt="" srcset="">
+                            <p>Gives a Captain more room in a
+                                day without hampering their daily
+                                activities. You can decide
+                                on when to go on the next ride.</p>
+                        </div>
+                    </div>
+                    <div class="ankita2">
+                        <div class="detail2">
+                            <img src="ankita 1.png" alt="" srcset="">
+                            <p>Gives a Captain more room in a
+                                day without hampering their daily
+                                activities. You can decide
+                                on when to go on the next ride.</p>
+                        </div>
+                    </div>
+                    <div class="ankita3">
+                        <div class="detail3">
+                            <img src="ankita 1.png" alt="" srcset="">
+                            <p>Gives a Captain more room in a
+                                day without hampering their daily
+                                activities. You can decide
+                                on when to go on the next ride.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box7">
+            <h1>FAQ's</h1>
+            <div class="questions">
+                <div class="question">
+                    <p>What is YBGO?<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="rgb(34, 118, 227)"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg></p>
+                    <div class="answer">
+                        <p>YBGO is a leading taxi booking service...</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>How do I know that my booking is confirmed?<svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="rgb(34, 118, 227)"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg></p>
+                    <div class="answer">
+                        <p>You will receive a confirmation email...</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>Can I change my booking?<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="rgb(34, 118, 227)"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg></p>
+                    <div class="answer">
+                        <p>Yes, you can change your booking...</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>What are the taxi rates from Delhi?<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                             fill="rgb(34, 118, 227)"
+                            class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg></p>
+                    <div class="answer">
+                        <p>The rates vary depending on the distance...</p>
+                    </div>
+                </div>
+                <div class="question">
+                    <p>What are the taxi booking options available in Delhi?<svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16"
+                            fill="rgb(34, 118, 227)" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                        </svg></p>
+                    <div class="answer">
+                        <p>We offer various booking options...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box8">
+            <div class="Get">
+                <h1>Get In Touch</h1>
+                <P>Send us a message and we will get back to you as soon as possible!</P>
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="text" id="phone" placeholder="Your phone Number" required>
+                    <textarea id="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-section about">
+                        <h3>About Us</h3>
+                        <p>YBGO is your ultimate travel companion, offering curated travel packages and seamless booking
+                            experiences.</p>
+                    </div>
+                    <div class="footer-section links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Destinations</a></li>
+                            <li><a href="#">Packages</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section contact">
+                        <h3>Contact Us</h3>
+                        <p>Email: info@ybgo.com</p>
+                        <p>Phone: +123 456 7890</p>
+                        <div class="social-icons">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                    class="bi bi-facebook" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                </svg></a>
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                    class="bi bi-twitter" viewBox="0 0 16 16">
+                                    <path
+                                        d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                                </svg></a>
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg></a>
+                        </div>
+                    </div>
+                    <div class="footer-section newsletter">
+                        <h3>Newsletter</h3>
+                        <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                        <form action="#">
+                            <input type="email" placeholder="Your email address" required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 YBGO. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

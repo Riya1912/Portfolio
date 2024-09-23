@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+.container {
+  margin: 0 auto;
+}
+.text {
+  display: flex;
+  margin-top: 32px;
+  padding-left: 20%;
+}
+.enter {
+  margin-right: 12px;
+  position: relative;
+}
+.data {
+  border: 1px solid #2565df;
+  border-radius: 8px;
+  height: 60px;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  position: relative;
+  padding: 10px 18px 15px;
+}
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  color: #444444;
+  position: absolute;
+  padding: 0px 4px;
+  left: 14px;
+  top: -10px;
+  background-color: rgb(255, 255, 255);
+}
+.place {
+  display: flex;
+}
+input {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+input::placeholder {
+  color: #a2a2a2;
+  font-weight: 600;
+}
+.date-section {
+  display: flex;
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+  background: none;
+  display: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: none;
+  display: none;
+}
+.dd {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  right: -24px;
+  top: 10px;
+  z-index: 1;
+}
+.date {
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  line-height: normal;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(20, 24, 35);
+  margin-bottom: 2px;
+}
+.day {
+  line-height: normal;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(119, 119, 119);
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+.return {
+  font-size: 12px;
+  font-weight: 400;
+  position: absolute;
+  line-height: 14.22px;
+  color: rgb(113, 113, 113);
+  padding-right: 10px;
+}
+.modify button {
+  background: #ff8000;
+  color: white;
+  padding: 10px;
+  width: 8%;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  top: 13%;
+  left: 71.8%;
+}
+.taxis {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  background: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 0px 12px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 2% auto;
+}
+.taxi ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: disc;
+  color: #494343;
+}
+.taxi-name {
+  margin-left: -10%;
+}
+.taxis img {
+  width: 80%;
+}
+.taxi p,
+h2,
+li {
+  padding-top: 5px;
+}
+.taxis span {
+  font-size: 15px;
+  color: #4b545a;
+}
+.money {
+  text-align: center;
+}
+.money button {
+  background: #ff8000;
+  color: white;
+  padding: 8px;
+  width: 8%;
+  border: none;
+  border-radius: 50px;
+  position: absolute;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  left: 71%;
+  margin-top: 10px;
+}
+.money p {
+  color: #747474;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 362px) {
+  .text {
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 5%;
+  }
+  .taxi {
+    padding-top: 17%;
+    padding-left: 5%;
+  }
+  .taxi-name {
+    margin-left: -23%;
+}
+  .taxis {
+    text-align: left;
+    width: 125%;
+    padding: 10px 20px;
+    padding-bottom: 50px;
+    margin-top: 20px;
+  }
+  .taxis img {
+    width: 70%;
+    margin-top: 24px;
+  }
+  .money {
+    position: absolute;
+    text-align: left;
+    padding-top: 100px;
+    padding-left: 185px;
+}
+  .money button {
+    background: #ff8000;
+    color: white;
+    padding: 8px;
+    width: 40%;
+    border: none;
+    border-radius: 50px;
+    position: absolute;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    left: 90%;
+    top: 60%;
+}
+  .modify button {
+    background: #ff8000;
+    color: white;
+    padding: 10px;
+    width: 40%;
+    border: none;
+    border-radius: 50px;
+    position: absolute;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    top: 27%;
+    left: 85%;
+  }
+}

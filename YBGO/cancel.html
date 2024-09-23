@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Page</title>
+    <link rel="stylesheet" href="cancel.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+            const cancelButtons = document.querySelectorAll('.cancel-button');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    if (this.textContent === 'Cancelled') {
+                        cancelButtons.forEach(button => {
+                            button.textContent = 'Cancelled';
+                            button.disabled = true; // Disable the button if it's cancelled
+                        });
+                    } else {
+                        cancelButtons.forEach(button => {
+                            button.textContent = 'Cancel booking';
+                            button.disabled = false; // Enable the button when not cancelled
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab active">All</div>
+        <div class="tab">Cancelled</div>
+    </div>
+
+    <div class="all">
+    <div class="booking-card">
+        <div class="car-image">
+            <img src="Sedan.png" alt="Car">
+        </div>
+        <div class="booking-details">
+            <div class="book-name">
+            <h2>Dzire, Etios</h2>
+            <p>Sedan &nbsp;&nbsp;&nbsp; 28 July 2023 &nbsp;&nbsp;&nbsp; 8:48 AM</p>
+        </div>
+            <hr>
+            <div class="info">
+                <div class="info1">
+            <p><strong>Booking ID:</strong> FmfnsX10UyNP17</p>
+            <p><strong>From:</strong> Ahmedabad, Gujarat, India</p>
+            <p><strong>To:</strong> Surat, Gujarat, India</p>
+        </div>
+        <div class="info2">
+            <p><strong>Estimated KM:</strong> 500 KM;</p>
+            <p><strong>Estimated Trip Duration:</strong> 7 hrs</p>
+            <p><strong>Trip Type:</strong> Outstation</p>
+        </div>
+        </div>
+        </div>
+    </div>
+        <button class="cancel-button">Cancel booking</button>
+    </div>
+    
+<div class="all">
+    <div class="booking-card">
+        <div class="car-image">
+            <img src="Sedan.png" alt="Car">
+        </div>
+        <div class="booking-details">
+            <div class="book-name">
+            <h2>Dzire, Etios</h2>
+            <p>Sedan &nbsp;&nbsp;&nbsp; 28 July 2023 &nbsp;&nbsp;&nbsp; 8:48 AM</p>
+        </div>
+            <hr>
+            <div class="info">
+                <div class="info1">
+            <p><strong>Booking ID:</strong> FmfnsX10UyNP17</p>
+            <p><strong>From:</strong> Ahmedabad, Gujarat, India</p>
+            <p><strong>To:</strong> Surat, Gujarat, India</p>
+        </div>
+        <div class="info2">
+            <p><strong>Estimated KM:</strong> 500 KM;</p> <p><strong>Estimated Trip Duration:</strong> 7 hrs</p>
+            <p><strong>Trip Type:</strong> Outstation</p>
+        </div>
+        </div>
+        </div>
+    </div>
+        <button class="cancel-button">Cancel booking</button>
+    </div>
+
+    <div class="all">
+        <div class="booking-card">
+            <div class="car-image">
+                <img src="Sedan.png" alt="Car">
+            </div>
+            <div class="booking-details">
+                <div class="book-name">
+                <h2>Dzire, Etios</h2>
+                <p>Sedan &nbsp;&nbsp;&nbsp; 28 July 2023 &nbsp;&nbsp;&nbsp; 8:48 AM</p>
+            </div>
+                <hr>
+                <div class="info">
+                    <div class="info1">
+                <p><strong>Booking ID:</strong> FmfnsX10UyNP17</p>
+                <p><strong>From:</strong> Ahmedabad, Gujarat, India</p>
+                <p><strong>To:</strong> Surat, Gujarat, India</p>
+            </div>
+            <div class="info2">
+                <p><strong>Estimated KM:</strong> 500 KM;</p>
+                <p><strong>Estimated Trip Duration:</strong> 7 hrs</p>
+                <p><strong>Trip Type:</strong> Outstation</p>
+            </div>
+            </div>
+            </div>
+        </div>
+            <button class="cancel-button">Cancel booking</button>
+        </div>
+
+        <div class="all">
+            <div class="booking-card">
+                <div class="car-image">
+                    <img src="Sedan.png" alt="Car">
+                </div>
+                <div class="booking-details">
+                    <div class="book-name">
+                    <h2>Dzire, Etios</h2>
+                    <p>Sedan &nbsp;&nbsp;&nbsp; 28 July 2023 &nbsp;&nbsp;&nbsp; 8:48 AM</p>
+                </div>
+                    <hr>
+                    <div class="info">
+                        <div class="info1">
+                    <p><strong>Booking ID:</strong> FmfnsX10UyNP17</p>
+                    <p><strong>From:</strong> Ahmedabad, Gujarat, India</p>
+                    <p><strong>To:</strong> Surat, Gujarat, India</p>
+                </div>
+                <div class="info2">
+                    <p><strong>Estimated KM:</strong> 500 KM;</p>
+                    <p><strong>Estimated Trip Duration:</strong> 7 hrs</p>
+                    <p><strong>Trip Type:</strong> Outstation</p>
+                </div>
+                </div>
+                </div>
+            </div>
+                <button class="cancel-button">Cancel booking</button>
+            </div>
+
+            <div class="all">
+                <div class="booking-card">
+                    <div class="car-image">
+                        <img src="Sedan.png" alt="Car">
+                    </div>
+                    <div class="booking-details">
+                        <div class="book-name">
+                        <h2>Dzire, Etios</h2>
+                        <p>Sedan &nbsp;&nbsp;&nbsp; 28 July 2023 &nbsp;&nbsp;&nbsp; 8:48 AM</p>
+                    </div>
+                        <hr>
+                        <div class="info">
+                            <div class="info1">
+                        <p><strong>Booking ID:</strong> FmfnsX10UyNP17</p>
+                        <p><strong>From:</strong> Ahmedabad, Gujarat, India</p>
+                        <p><strong>To:</strong> Surat, Gujarat, India</p>
+                    </div>
+                    <div class="info2">
+                        <p><strong>Estimated KM:</strong> 500 KM;</p>
+                        <p><strong>Estimated Trip Duration:</strong> 7 hrs</p>
+                        <p><strong>Trip Type:</strong> Outstation</p>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                    <button class="cancel-button">Cancel booking</button>
+                </div>
+    
+</body>
+</html>

@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px 25%;
+    font-size: 12px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.tab:not(.active) {
+    background-color: white;
+    color: #000000;
+}
+.all{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.booking-card {
+    display: flex;
+}
+
+.car-image {
+    margin-right: 20px;
+}
+
+.car-image img {
+    max-width: 150px;
+    padding-top: 30px;
+}
+
+.booking-details {
+    flex-grow: 1;
+}
+.info{
+    display: flex;
+    gap: 20%;
+}
+
+.booking-details h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.booking-details p {
+    margin: 5px 0;
+    color: #5f5a5a;
+}
+
+.booking-card hr{
+    border: 1px solid #000000;
+    border-style: dashed;
+}
+
+.cancel-button {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    font-size: 18px;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: 78%;
+    margin-left: 23%;
+    margin-top: 5px;
+}
+
+.cancel-button:hover {
+    background-color: darkred;
+}
+
+
+@media screen and (max-width: 362px){
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 20px 5%;
+        font-size: 15px;
+    }
+    .tabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .book-name p{
+        text-align: center;
+    }
+    .booking-card {
+        display: flex;
+        flex-direction: column;
+    }
+    .booking-card h2, img{
+        text-align: center;
+    }
+    .booking-card hr {
+        display: none;
+    }
+    .car-image img {
+        max-width: 180px;
+        padding-top: 60px;
+        position: absolute;
+       padding-left: 15%;
+    }
+    .info {
+        flex-direction: column;
+        padding-top: 100px;
+    }
+    .cancel-button {
+        width: 98%;
+        margin-top: 8px;
+        margin-left: 0%;
+        font-size: 15px;
+}
+}

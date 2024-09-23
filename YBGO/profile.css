@@ -1,0 +1,250 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 2px solid #ff8000;
+  border-radius: 10px;
+  padding: 20px;
+}
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  background: #ff8000;
+  text-align: center;
+  color: #ffffff;
+  padding: 5px 20px;
+  left: 22.3%;
+  top: 3%;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+}
+.profile {
+  padding-top: 5%;
+}
+.profile-pic {
+  display: flex;
+}
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+}
+label {
+  color: #384d6c;
+  font-size: 16px;
+  font-weight: 700;
+}
+.name {
+  color: #384d6c;
+  padding-top: 10px;
+}
+.name p {
+  margin-top: -10px;
+}
+.buttons {
+  padding-left: 27%;
+  padding-top: 3%;
+}
+.buttons button {
+  background: #2565df;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 20px;
+}
+button[type="delete"] {
+  background: none;
+  color: #000000;
+  border: 1px solid #384d6c;
+  padding: 13px 50px;
+}
+.profile-content {
+  padding: 20px;
+}
+.profile-form {
+  display: flex;
+  flex-direction: column;
+}
+.personal-info,
+.billing-info {
+  margin-bottom: 30px;
+}
+.personal-info .input-group input {
+  flex: 1;
+  padding: 10px;
+  width: 160%;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.billing-info {
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 20px;
+}
+.personal-info .input-group {
+  display: flex;
+  gap: 23%;
+  margin-bottom: 20px;
+}
+.billing-info .input-group {
+  display: flex;
+  gap: 21.5%;
+  margin-bottom: 20px;
+}
+.input-group .input svg{
+    position: absolute;
+    top: 42.1%;
+}
+.input-group .input {
+  display: flex;
+  flex-direction: column;
+}
+.billing-info .input-group input {
+  flex: 1;
+  padding: 10px;
+  width: 150%;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 16px;
+}
+#phone{
+  margin-left: 10px;
+}
+.info-note {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+.form-actions {
+  justify-content: right;
+  display: flex;
+  gap: 10px;
+}
+.save-btn {
+  background-color: #ff8000;
+  border: none;
+  padding: 5px 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.cancel-btn {
+  background-color: transparent;
+  border: none;
+  padding: 5px 20px;
+  color: #666666;
+  font-size: 16px;
+  cursor: pointer;
+}
+.input input[type=email]{
+  padding-left: 19%; 
+  width: 155%;
+}
+#phone input[type=text]{
+  padding-left: 13%;
+}
+
+@media screen and (max-width: 362px){
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+  }
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    background: #ff8000;
+    text-align: center;
+    color: #ffffff;
+    padding: 5px 20px;
+    left: 3.2%;
+    top: 1.6%;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+}
+.profile {
+  padding-top: 10%;
+}
+.profile-pic {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  color: #384d6c;
+  padding-top: 0px;
+}
+.buttons {
+  padding-left: 0%;
+  padding-top: 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile-content {
+  padding: 20px 0px;
+}
+.personal-info .input-group {
+  display: flex;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+.input{
+  margin-top: 10px;
+}
+.personal-info .input-group input {
+  flex: 1;
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.input-group .input svg {
+  position: absolute;
+  top: 86%;
+}
+.input-group #phone svg{
+  top: 96.3%;
+}
+#phone input{
+  width: 80%;
+}
+.form-actions {
+  justify-content: center;
+}
+.billing-info .input-group {
+  display: flex;
+  gap: 22%;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+.billing-info .input-group input {
+  flex: 1;
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.bill h2{
+  text-align: center;
+}
+.input input[type=email]{
+  padding-left: 13%; 
+  width: 80%;
+}
+#phone{
+  margin-left: 0px;
+}
+}
