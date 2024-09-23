@@ -1,0 +1,353 @@
+@media (max-width: 400px) {
+  .container {
+    overflow-x: hidden;
+  }
+  .bull {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .logo img {
+    width: 60%;
+    padding-left: 0%;
+    margin-top: -20%;
+  }
+  .name {
+    font-size: 15px;
+    text-align: left;
+  }
+  .number {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 45%;
+  }
+  .get-started-btn {
+    width: 40%;
+    margin-left: 30%;
+  }
+  .status {
+    padding: 0 10%;
+  }
+  .head {
+    margin-top: -12%;
+  }
+  .head .arrow {
+    display: block;
+  }
+  .boxes {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+  }
+  .info {
+   margin-left: -80%;
+  }
+  .box {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #535353;
+    padding: 30px 100px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+  }
+  .graph img {
+    position: absolute;
+    width: 35%;
+    padding-left: 5%;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1;
+  }
+
+  .left-arrow {
+    left: 4%;
+    background: #3A3A3C;
+    border-radius: 50%;
+    padding: 2px 7px;
+    border: 1px solid #000000;
+  }
+
+  .right-arrow {
+    right: 4%;
+    background: #3A3A3C;
+    border-radius: 50%;
+    padding: 2px 7px;
+    border: 1px solid #000000;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .active {
+    background: #2f3241;
+    border: none;
+  }
+  .vector-home,
+  .vector-market,
+  .vector-about,
+  .vector-invest {
+    display: none;
+  }
+  .about {
+    flex-direction: column;
+  }
+  .about-bull img {
+    width: 100%;
+    padding-top: 15%;
+  }
+  .company {
+    width: 100%;
+    padding: 30px;
+    margin-top: 0%;
+  }
+  .company h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: -110%;
+  }
+  .company p {
+    padding-top: 100%;
+  }
+  .indian-market {
+    flex-direction: column-reverse;
+  }
+  .market-graph img {
+    width: 90%;
+    margin-top: 20%;
+    padding-left: 10%;
+  }
+  .indian {
+    padding-left: 10%;
+    margin-top: 0%;
+  }
+  .heading {
+    width: 100%;
+    font-size: 10px;
+    margin-top: -80%;
+  }
+  .heading p {
+    font-size: 20px;
+    width: 94%;
+    padding-top: 80%;
+  }
+  .funds {
+    width: 90%;
+  }
+  .work-step {
+    height: auto;
+    gap: 20%;
+  }
+  .steps {
+    background: none;
+  }
+  .steps h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .step {
+    width: 100%;
+    margin-top: 10%;
+  }
+  .step {
+    display: none;
+  }
+  .step.active {
+    display: block;
+    background: #151111;
+  }
+
+  .steps {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .show {
+    margin-top: 10%;
+  }
+  .sh {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #b40000;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .sh.active {
+    background-color: #ffffff; /* Active indicator color */
+  }
+
+  .download-app {
+    background-image: none;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 15% 10%;
+    gap: 10%;
+  }
+  .download-info {
+    width: 100%;
+    flex-direction: column;
+    font-size: 15px;
+  }
+  .app img {
+    width: 45%;
+  }
+
+  .download-info h1 {
+    margin-top: -170%;
+    text-align: center;
+  }
+  .download-info p {
+    padding-top: 150%;
+  }
+  .person-img img {
+    width: 90%;
+  }
+  .download-img {
+    width: 83%;
+    padding-left: 15%;
+  }
+  .download-img img {
+    width: 100%;
+    padding-left: 0%;
+  }
+  .count h1 {
+    padding-top: 150%;
+  }
+  .members .count p {
+    font-size: 20px;
+    padding-top: 160%;
+  }
+  .up {
+    padding-top: 10%;
+  }
+  .up .count p {
+    margin-top: -140%;
+  }
+  .members p {
+    font-size: 10px;
+    margin-top: -130%;
+  }
+  .faq .ques .que {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+    background: #ffffff;
+  }
+  .invest {
+    padding-top: 15%;
+  }
+  .invest h1 {
+    font-size: 18px;
+    padding: 0 15%;
+  }
+
+  .comaup {
+    position: absolute;
+    width: 5%;
+    margin-top: 20%;
+    margin-left: -45%;
+  }
+  .comabt {
+    width: 5%;
+    margin-left: 30%;
+    margin-top: -5.5%;
+    position: absolute;
+  }
+  .testimonial {
+    display: none;
+  }
+  .testimonial.active {
+    display: block;
+  }
+  .dots {
+    margin-top: 10px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #b40000;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: #ffffff; /* Active dot color */
+  }
+
+  .business {
+    padding-left: 5%;
+  }
+  .business img {
+    width: 13%;
+  }
+  .question {
+    padding-top: 20%;
+  }
+  .question h1 {
+    padding: 0 10%;
+    font-size: 20px;
+  }
+  .ques {
+    gap: 20px;
+    padding-left: 5%;
+  }
+  .que {
+    width: 95%;
+  }
+  .que h1 {
+    font-size: 15px;
+  }
+  .no {
+    margin-top: 0px;
+    font-size: 20px;
+    background: #b40000;
+    border-radius: 50%;
+    padding: 10px;
+    color: #ffffff;
+  }
+  .footer {
+    padding: 30px 30px;
+  }
+  .foot-up {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .input {
+    display: flex;
+    padding-left: 0%;
+  }
+  .foot-bull img {
+    width: 70%;
+    padding-left: 30%;
+  }
+  .type {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding-left: 2%;
+    text-align: left;
+  }
+  hr {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .copyrights span {
+    display: none;
+  }
+}
