@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Trackside Tadka</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="main-page" id="main-page">
+      <div class="track">
+        <img src="tracktadka img/tracktadka.jpg" alt="" srcset="">
+      </div>
+      <div class="navbar">
+        <p>Reserved Your Table</p>
+        <p class="nav">ABOUT US</p>
+        <p class="nav">MEMORIES</p>
+        <p class="nav">EVENT</p>
+        <p class="nav">CAREERS</p>
+        <p class="nav">Use</p>
+        <p class="menu">Menu</p>
+      </div>
+      <div class="form-container">
+        <h2>RESERVED YOUR TABLE</h2>
+        <form id="contactForm">
+          <div class="name">
+            <select id="title" name="title" required>
+              <option value="mr">MRS.</option>
+              <option value="mrs">MR.</option>
+            </select>
+            <input type="text" id="name" name="name" placeholder="Enter Your name" required>
+          </div>
+          <div class="phone-container">
+            <input type="tel" id="phone" name="phone" value="+91" required>
+            <button type="button" id="getOtpBtn">Get OTP</button>
+          </div>
+
+          <input type="date" id="date" name="date" required>
+
+          <select id="timeslot" name="timeslot" placeholder="timeslots" required>
+            <option value="9:00-10:00">9:00-10:00 AM</option>
+            <option value="10:00-11:00">10:00-11:00 AM</option>
+            <option value="11:00-12:00">11:00-12:00 PM</option>
+            <option value="12:00-1:00">12:00-1:00 PM</option>
+            <option value="1:00-2:00">1:00-2:00 PM</option>
+            <option value="2:00-3:00">2:00-3:00 PM</option>
+            <option value="3:00-4:00">3:00-4:00 PM</option>
+            <option value="4:00-5:00">4:00-5:00 PM</option>
+            <option value="5:00-6:00">5:00-6:00 PM</option>
+            <option value="6:00-7:00">6:00-7:00 PM</option>
+            <option value="7:00-8:00">7:00-8:00 PM</option>
+          </select>
+
+          <input type="number" id="persons" name="persons" min="1" placeholder="Persons" required>
+
+          <div class="button-container">
+            <button type="button" id="cancelBtn">Cancel</button>
+            <p>|</p>
+            <button type="submit" id="submitBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+          </div>
+      </div>
+      <!-- Modal1 -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="shape-container">
+                <!--Ractangle button-->
+                <div class="left">
+                  <div class="train">
+                    <button type="button" class="btn-square" id="trainInsideBtn" data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop">Train Inside</button>
+                    <button type="button" class="btn-square">Loco Longe</button>
+                  </div>
+                  <div class="trainout">
+                    <button type="button" class="btn-square">Train Outside</button>
+                  </div>
+                </div>
+                <!-- Circle button -->
+                <div class="middle">
+                  <div class="round">
+                    <button type="button" class="btn-rounded"></button>
+                    <button type="button" class="btn-rounded"></button>
+                    <button type="button" class="btn-rounded"></button>
+                  </div>
+                  <div class="cafe">
+                    <button type="button" class="btn-square">Cafateria</button>
+                    <button type="button" class="btn-circle">Circle</button>
+                  </div>
+                </div>
+                <!-- Square button -->
+                <div class="right">
+                  <button type="button" class="btn-square">Gazebo one</button>
+                  <button type="button" class="btn-square">Gazebo Two</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal 2-->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="image">
+              <img src="tracktadka img/rail-track-removebg-preview.png">
+            </div>
+
+            <div class="train">
+              <div class="blink">
+                <div class="lights" id="light1">
+                </div>
+                <div class="lights" id="light2">
+                </div>
+                <div class="lights" id="light3">
+                </div>
+                <div class="lights" id="light4">
+                </div>
+              </div>
+
+              <div class="modal-body">
+                <div class="bottom"></div>
+                <div class="red-left"></div>
+                <div class="black-left"></div>
+                <div class="red-right"></div>
+                <div class="black-right"></div>
+
+                <div class="seat">
+                  <div class="block">
+                    <div class="blockleft">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>19</p>
+                      </div>
+                    </div>
+                    <div class="blockright">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>1</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="block">
+                    <div class="blockleft">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>18</p>
+                      </div>
+                    </div>
+                    <div class="blockright">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>2</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="block">
+                    <div class="blockleft">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>17</p>
+                      </div>
+                    </div>
+                    <div class="blockright">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>3</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="block">
+                    <div class="blockleft">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>16</p>
+                      </div>
+                    </div>
+                    <div class="blockright">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>4</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="block">
+                    <div class="blockleft">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>15</p>
+                      </div>
+                    </div>
+                    <div class="blockright">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>5</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="block">
+                    <div class="blockleft">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>14</p>
+                      </div>
+                    </div>
+                    <div class="blockright">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>6</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="block">
+                    <div class="blockleft">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>13</p>
+                      </div>
+                    </div>
+                    <div class="blockright">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>7</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="block">
+                    <div class="blockleft">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>12</p>
+                      </div>
+                    </div>
+                    <div class="blockright">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>8</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="block">
+                    <div class="blockleft">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>10</p>
+                      </div>
+                    </div>
+                    <div class="blockright">
+                      <div class="boxes">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                      </div>
+                      <div class="number">
+                        <p>9</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="button" id="bookBtn">Book</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
