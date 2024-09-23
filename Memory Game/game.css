@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ body{
+    background-image: url(question\ mark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+@keyframes head {
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+.header h2{
+    text-align: center;
+    color: brown;
+    font-size: 80px;
+    margin-top: 10%;
+    animation: head 1s forwards;
+}
+.header h2 img{
+    height: 100px;
+    position: absolute;
+}
+.levels .level{
+    margin-top: 50px;
+    font-size: 30px;
+    border: 2px solid white;
+    width: 20%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px 15px;
+    margin-left: 39%;
+    cursor: pointer;
+}
+@keyframes level {
+    from{
+        transform: translateX(-200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+@keyframes level1 {
+    from{
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+#level1{
+    background: bisque;
+    box-shadow: 5px 5px 20px black;
+    animation: level 1.5s forwards;
+}
+#level1:hover{
+    background: rgb(242, 206, 163);
+}
+#level2{
+    background: rgb(167, 204, 238);
+    box-shadow: 5px 5px 20px black;
+    animation: level1 1.5s forwards;
+}
+#level2:hover{
+    background: rgb(136, 186, 233);
+}
+#level3{
+    background: rgb(225, 162, 162);
+    box-shadow: 5px 5px 20px black;
+    animation: level 1.5s forwards;
+}
+#level3:hover{
+    background: rgb(231, 144, 144);
+}

@@ -1,0 +1,148 @@
+body{
+  background-image: url(question\ mark.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.body-background-change {
+  background: url(bg\ for\ win.gif);
+}
+.lines {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 0px;
+}
+.lines h2 {
+  color: azure;
+}
+.lines h3 {
+  color: aquamarine;
+}
+.lines h1 {
+  color: antiquewhite;
+}
+.lines h4 {
+  font-size: 40px;
+  color: white;
+}
+.lines img {
+  height: 90px;
+}
+.start #start {
+  padding: 30px 50px;
+  text-align: center;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 40px;
+  font-style: italic;
+  background: rgb(221, 161, 161);
+  box-shadow: 5px 5px 20px black;
+  margin-left: 20px;
+}
+.btn #back {
+  padding: 30px 50px;
+  text-align: center;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 40px;
+  font-style: italic;
+  background: rgb(33, 199, 21);
+  box-shadow: 5px 5px 20px black;
+}
+.btn {
+  display: flex;
+  padding-left: 33%;
+}
+.gamestart {
+  padding-left: 35%;
+  border-radius: 10px;
+  display: none;
+  color: white;
+}
+.gamestart p{
+    font-size: 20px;
+}
+.gamestart .cards {
+  height: 560px;
+  width: 420px;
+  border-radius: 20px;
+  background-color: rgb(217, 207, 214);
+  display: flex;
+  flex-wrap: wrap; 
+}
+.card {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  perspective: 1000px;
+  margin: 10px;
+  cursor: pointer;
+}
+.card .frontview, .card .backview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  transition: transform 0.6s;
+}
+.card .frontview {
+  background-color: #558f5d;
+}
+.card .backview {
+  background-color: #d84c53;
+  transform: rotateY(180deg);
+}
+.card.flip .frontview {
+  transform: rotateY(180deg);
+}
+.card.flip .backview {
+  transform: rotateY(0deg);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.popup{
+  margin: 0 auto;
+  margin-top:20%;
+  height: 250px;
+  width: 350px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px black;
+  display: none;
+}
+.popup h2{
+  text-align: center;
+  font-size: 40px;
+  padding-top: 20px;
+}
+.popup img{
+  height: 50px;
+  margin-top: 40px;
+  margin-left: -170px;
+  position: absolute;
+}
+.popup p{
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+}
+.popup button{
+  padding: 10px;
+  width: 90%;
+  margin-left: 5%;
+  border: none;
+  border-radius: 10px;
+  background: rgb(157, 157, 237);
+  font-size: 20px;
+  margin-top: 20px;
+}
