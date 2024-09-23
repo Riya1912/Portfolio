@@ -1,0 +1,276 @@
+/* business.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.firstpage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+.left, .right {
+    flex: 1;
+}
+
+.button {
+    margin-bottom: 20px;
+}
+
+button img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+button p {
+    display: inline;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.head h1 {
+    font-size: 36px;
+    line-height: 1.2;
+}
+
+.up {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Rectangle, .logo {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.name h4, .name p {
+    margin: 0;
+}
+
+.star {
+    margin-left: auto;
+    text-align: center;
+}
+
+.star h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.img img {
+    max-width: 100%;
+}
+
+.secondpage {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.border {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.uper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.lab img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.lab h3, .lab p {
+    display: inline;
+    margin: 0;
+}
+
+.join {
+    text-align: right;
+}
+
+.join p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff6347;
+}
+
+.big {
+    text-align: center;
+}
+
+.big-logo img {
+    margin-bottom: 20px;
+}
+
+.big h1 {
+    font-size: 28px;
+    line-height: 1.4;
+}
+
+.line {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.service {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.service div {
+    text-align: center;
+}
+
+.service div img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.Ecosystem {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.eco-left h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.left-border {
+    border-left: 4px solid #ff6347;
+    padding-left: 20px;
+}
+
+.left-border h2 {
+    font-size: 20px;
+}
+
+.left-border span {
+    font-weight: bold;
+    color: #ff6347;
+}
+
+.call, .quality {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.call img, .quality img {
+    margin-right: 10px;
+}
+
+.review .rose {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.review .rose img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.vect img {
+    margin: 10px;
+}
+
+.thirdpage, .forthpage {
+    padding: 40px 20px;
+}
+
+.easy-left, .easy-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.easy-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.easy-left div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.easy-left img {
+    margin-right: 10px;
+}
+
+.problems {
+    display: flex;
+    justify-content: space-between;
+}
+
+.problems div {
+    flex: 1;
+    text-align: center;
+    margin: 10px;
+}
+
+.pro-sol {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.lastpage {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.lastpage .border {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.partners {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    margin-left: 40px;
+}
+
+.partners div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.partners h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.partners p {
+    font-size: 16px;
+    line-height: 1.6;
+}
