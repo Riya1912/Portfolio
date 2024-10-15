@@ -1,0 +1,63 @@
+@media (min-width: 375px) and (max-width: 475px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav {
+    gap: 140px;
+  }
+  
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+  .home {
+    background-image: none;
+  }
+  .home-content {
+    text-align: center;
+    padding-top: 100%;
+  }
+  .about {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 50%;
+  }
+  .about-text {
+    text-align: center;
+  }
+  .container1 {
+    width: 600px;
+    padding: 0px 60px 10px;
+    margin-left: 0px;
+  }
+  .sub-title {
+    padding-bottom: 0px;
+  }
+  .heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+    padding-top: 100px;
+  }
+  .contact {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
